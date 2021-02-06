@@ -16,12 +16,16 @@ class Seat extends React.Component {
         if (this.props.seat.employee) {
             classList.push("occupied")
         }
+
+        if (this.props.isSearchResult) {
+            classList.push("search-result")
+        }
         return (
             <div
                 className={classList.join(" ")}
                 onMouseEnter={this.toggleShowDetails.bind(this)}
                 onMouseLeave={this.toggleShowDetails.bind(this)}>
-                {this.state.showDetails && this.props.seat.employee ?
+                {(this.state.showDetails || (this.props.showSearchDetail && this.props.isSearchResult)) && this.props.seat.employee ?
                     <EmployeeDetail employee={this.props.seat.employee} />
                     : null}
             </div>

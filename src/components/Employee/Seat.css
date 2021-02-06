@@ -9,6 +9,9 @@
 .seat.occupied{
     background-color: rgb(51, 51, 51);
 }
+.seat.search-result{
+    background-color: rgb(86, 66, 199);
+}
 .seat:nth-child(4n-3) {
     top: -16%;
     left: 15%;

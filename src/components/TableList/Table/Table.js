@@ -14,12 +14,9 @@ class Table extends React.Component {
         let newState = {
             tableSeats: this.props.table.seats.map((seat) => {
                 let employeeList = this.props.employees.filter(employee => {
-                    console.log(employee.seatIdentifier, seat.identifier, employee.seatIdentifier == seat.identifier)
                     return employee.seatIdentifier == seat.identifier;
                 }),
                     employee = employeeList[0];
-                
-                
                 return {
                     ...seat,
                     employee: employee
@@ -29,15 +26,19 @@ class Table extends React.Component {
         this.setState(newState)
 
     }
+    componentDidUpdate() { 
 
+    }
 
     render() {
+       
         return (
             <div className="table">
                 <div>{this.props.table.title}</div>
                 <div>
                     {this.state.tableSeats.map(seat => {
-                        return <Seat key={seat.identifier} seat={seat} />
+                        let flag = this.props.searchResults.find((emp) => { return emp.seatIdentifier === seat.identifier; }) ? true : false;
+                        return <Seat key={seat.identifier} seat={seat} isSearchResult={flag} showSearchDetail={this.props.showSearchDetail}/>
                     })}
                 </div>
             </div>
@@ -47,7 +48,9 @@ class Table extends React.Component {
 
 const mapStateToProps = (state) => {
     return {
-        employees: state.employees
+        employees: state.employees,
+        searchResults: state.searchResults,
+        showSearchDetail:state.showSearchDetail
     }
 }
 
