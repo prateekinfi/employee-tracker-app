@@ -2,8 +2,8 @@
     position: absolute;
     display: inline-flex;
     justify-content: center;
-    height: 40px;
-    width: 80px;
+    height: 30px;
+    width: 60px;
     background-color: rgb(206, 206, 206);
 }
 .seat.occupied{
@@ -13,22 +13,22 @@
     background-color: rgb(86, 66, 199);
 }
 .seat:nth-child(4n-3) {
-    top: -16%;
+    top: -15%;
     left: 15%;
     border-radius: 150px 150px 0 0;
 }
 .seat:nth-child(4n-2) {
-    top:  -16%;
+    top:  -15%;
     right: 15%;
     border-radius: 150px 150px 0 0;
 }
 .seat:nth-child(4n-1) {
-    bottom:  -16%;
+    bottom:  -15%;
     left: 15%;
     border-radius:0 0 150px 150px;
 }
 .seat:nth-child(4n) {
-    bottom:  -16%;
+    bottom:  -15%;
     right: 15%;
     border-radius:0 0 150px 150px;
 }

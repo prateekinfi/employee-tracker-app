@@ -3,9 +3,9 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    height: 250px;
-    margin: 50px;
-    flex-basis: 25%;
+    height: 200px;
+    margin: 50px 20px;
+    flex-basis: 29%;
     color: black;
     background: rgb(175, 167, 167);
 }

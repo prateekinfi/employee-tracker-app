@@ -26,9 +26,6 @@ class Table extends React.Component {
         this.setState(newState)
 
     }
-    componentDidUpdate() { 
-
-    }
 
     render() {
        
