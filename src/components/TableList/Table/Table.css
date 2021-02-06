@@ -1,0 +1,11 @@
+.table {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 400px;
+    margin: 50px;
+    flex-basis: 25%;
+    color: black;
+    background: rgb(182, 160, 160);
+}

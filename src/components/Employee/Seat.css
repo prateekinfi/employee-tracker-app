@@ -1,0 +1,31 @@
+.seat {
+    position: absolute;
+    display: inline-flex;
+    justify-content: center;
+    height: 40px;
+    width: 80px;
+    background-color: rgb(206, 206, 206);
+}
+.seat.occupied{
+    background-color: rgb(51, 51, 51);
+}
+.seat:nth-child(4n-3) {
+    top: -10%;
+    left: 15%;
+    border-radius: 150px 150px 0 0;
+}
+.seat:nth-child(4n-2) {
+    top: -10%;
+    right: 15%;
+    border-radius: 150px 150px 0 0;
+}
+.seat:nth-child(4n-1) {
+    bottom: -10%;
+    left: 15%;
+    border-radius:0 0 150px 150px;
+}
+.seat:nth-child(4n) {
+    bottom: -10%;
+    right: 15%;
+    border-radius:0 0 150px 150px;
+}
