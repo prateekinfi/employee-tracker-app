@@ -1,6 +1,11 @@
 .tables-container {
     display: flex;
     flex-wrap: wrap;
+    font-size: 20px;
+    width: 70%;
+    margin: 0 auto;
     justify-content: space-evenly;
     padding: 0 50px;
+    background-color: white;
+    border: 1px double black;
 }

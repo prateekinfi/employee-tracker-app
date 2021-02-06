@@ -4,7 +4,7 @@ import TableList from './components/TableList/TableList';
 
 function App() {
   return (
-    <div className="">
+    <div className="app-wrapper">
       <TableList />
     </div>
   );

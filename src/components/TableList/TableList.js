@@ -4,9 +4,6 @@ import Table from './Table/Table';
 import "./TableList.css"
 
 class TableList extends React.Component {
-    // componentDidMount() { 
-    //     // this.props.updateSeatsWithEmployes
-    // }
 
     render() { 
         return (
@@ -19,15 +16,11 @@ class TableList extends React.Component {
     }
 }
 
-const mapDispatchToProps = (dispatch) => { 
-    return {
-        // updateSeatsWithEmployes : dispatch({type:"UPDATE_SEATS"})
-    }
-}
+
 const mapStateToProps = (state) => { 
     return {
         tables: state.tables
     }
 }
 
-export default connect(mapStateToProps,mapDispatchToProps)(TableList);
+export default connect(mapStateToProps)(TableList);
