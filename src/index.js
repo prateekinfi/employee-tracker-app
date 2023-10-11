@@ -28,6 +28,6 @@ channel.onmessage = (e) => {
 };
 
 setInterval(() => {
-  console.log(" setInterval running", e);
+  console.log(" setInterval running");
   channel.postMessage("custom message");
 }, 5000);
