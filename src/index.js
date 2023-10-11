@@ -23,11 +23,14 @@ reportWebVitals();
 
 const channel = new BroadcastChannel("CTIChannel");
 
+const this1 = window;
+const this2 = BroadcastChannel;
+
 channel.onmessage = (e) => {
   console.log("on message", e);
 };
 
 setInterval(() => {
-  console.log(" setInterval running");
+  console.log(" setInterval running", this1, this2);
   channel.postMessage("custom message");
 }, 5000);
